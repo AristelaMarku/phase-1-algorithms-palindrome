@@ -1,10 +1,26 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+function isPalindrome(stringToCheck){
+  const stringArray = stringToCheck.toLowerCase().split("");
+  const reverseStringArray = stringArray.reverse().join("");
+  const result = reverseStringArray === stringToCheck.toLowerCase();
 }
 
-/* 
-  Add your pseudocode here
-*/
+
+function isPalindrome(word){
+  let start=0
+  let finish=word.length-1
+
+  while(start<finish){
+    if(word[start]!==word[finish]){
+      return false
+    }
+    start++
+    start--
+  }
+  return true
+}
+
+
+
 
 /*
   Add written explanation of your solution here
